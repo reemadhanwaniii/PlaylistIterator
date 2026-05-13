@@ -16,7 +16,7 @@ public class PlaylistIterator implements Iterator{
     }
 
     @Override
-    public Object next() {
+    public Song next() {
         if(!hasNext()) {
             throw new NoSuchElementException();
         }

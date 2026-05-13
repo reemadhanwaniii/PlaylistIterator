@@ -8,7 +8,7 @@ import java.util.List;
 public class InMemoryDatabase {
     List<Song> songs = new ArrayList<>();
 
-    private void seeder() {
+    public void seeder() {
         songs.add(new Song(1,"Shape of You","Ed sheeran"));
         songs.add(new Song(2,"Blinding Lights","Ed sheeran"));
         songs.add(new Song(3,"Bohemian Rhapsody","Ed sheeran"));

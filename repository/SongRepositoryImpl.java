@@ -11,6 +11,7 @@ public class SongRepositoryImpl implements SongRepository{
 
     public SongRepositoryImpl() {
         this.db = new InMemoryDatabase();
+        this.db.seeder();
     }
 
     @Override

@@ -16,7 +16,7 @@ public class SongService {
     }
 
     public void getSongs() {
-        while (!songIterator.hasNext()) {
+        while (songIterator.hasNext()) {
             System.out.println(songIterator.next());
         }
      }
