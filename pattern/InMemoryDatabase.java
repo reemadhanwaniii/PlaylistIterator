@@ -3,32 +3,25 @@ package pattern;
 import model.Song;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class InMemoryDatabase {
-    List<Song> songs = new ArrayList<>();
+    private Map<Integer,Song> db;
+
+    public InMemoryDatabase() {
+        this.db = new HashMap<>();
+    }
 
     public void seeder() {
-        songs.add(new Song(1,"Shape of You","Ed sheeran"));
-        songs.add(new Song(2,"Blinding Lights","Ed sheeran"));
-        songs.add(new Song(3,"Bohemian Rhapsody","Ed sheeran"));
-        songs.add(new Song(4,"Gehra hua","Ed sheeran"));
-        songs.add(new Song(5,"jaiye sajna","Ed sheeran"));
-        songs.add(new Song(6,"saiyaara","Ed sheeran"));
-        songs.add(new Song(7,"khat","Ed sheeran"));
+        this.db.put(1,new Song(1, "Shape of You", "Ed Sheeran"));
+        this.db.put(2,new Song(2, "Believer", "Imagine Dragons"));
+        this.db.put(3,new Song(3, "Perfect", "Ed Sheeran"));
+        this.db.put(4,new Song(4, "Closer", "Chainsmokers"));
     }
 
-    public List<Song> getAllSongs() {
-        return songs;
+    public Map<Integer, Song> getDb() {
+        return db;
     }
-
-    public void addSong(Song song) {
-        songs.add(song);
-    }
-
-    public boolean removeSone(int id) {
-        return songs.removeIf(song -> song.getId() == id);
-    }
-
-
 }
